@@ -1,21 +1,22 @@
+import React from "react";
 import { StyleSheet, Text, TextInput, View } from "react-native";
 import { useRouter } from "expo-router";
 
-const App = () => {
+const SignUp = () => {
   const router = useRouter();
   return (
     <View style={styles.container}>
-      <Text>Login Portal</Text>
+      <Text>SignUp</Text>
       <TextInput style={styles.inputStyle}>Email</TextInput>
       <TextInput style={styles.inputStyle}>Password</TextInput>
       <Text>
-        Don't have an account?
+        Have an account?
         <Text
           onPress={() => {
-            router.push("/signup");
+            router.push("/");
           }}
         >
-          SignUp
+          Login
         </Text>
       </Text>
     </View>
@@ -37,4 +38,5 @@ const styles = StyleSheet.create({
     padding: 12,
   },
 });
-export default App;
+
+export default SignUp;
